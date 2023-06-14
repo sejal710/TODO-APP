@@ -73,5 +73,19 @@ This is a TODO Food App that allows you to add, get, update, and delete food ite
 ```bash
    npm run server
  ``` 
+### Accessing the Application
+Once the development server is running, you can access the application by navigating to http://localhost:5173 in your web browser. 
+
+
+- ![Web capture_14-6-2023_13214_todo-app-fine vercel app](https://github.com/sejal710/TODO-APP/assets/108399174/e58792f2-de94-4359-aedc-1f0b4f0c7d75)
+- ![Web capture_14-6-2023_131728_todo-app-fine vercel app](https://github.com/sejal710/TODO-APP/assets/108399174/ac45e23e-f885-4378-a268-0a5fcfba8f78)
+- ![Web capture_14-6-2023_132442_todo-app-fine vercel app](https://github.com/sejal710/TODO-APP/assets/108399174/ab82b1c2-828f-4018-a807-7f2b702dba4f)
+- ![Web capture_14-6-2023_132526_todo-app-fine vercel app](https://github.com/sejal710/TODO-APP/assets/108399174/7714bab6-8d75-4e2c-babd-7ec3e212f971)
+- ![Web capture_14-6-2023_132238_todo-app-fine vercel app](https://github.com/sejal710/TODO-APP/assets/108399174/d4f84ef2-d7b9-4fc1-84f8-81158604b982)
+
  
- 
+### API Endpoints
+- GET   /todo - Get all food items.
+- POST  /addtodo - Add a new food item.
+- PATCH /updateTodo/:id - Update a food item by ID.
+- DELETE /deleteTodo/:id - Delete a food item by ID. 
