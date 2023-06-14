@@ -1,6 +1,6 @@
 import '../css/Data.css';
 import { AiOutlineEdit, AiOutlineDelete } from 'react-icons/ai';
-import { useState,useRef } from 'react';
+import { useState,useRef, useEffect } from 'react';
 import { Modal, Button,OverlayTrigger, Tooltip  } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {toast} from 'react-toastify'
@@ -25,7 +25,15 @@ export default function Data({ data,fetchData }: DataProps) {
   });
   const deleteTooltipRef = useRef<any>(null);
   const updateTooltipRef = useRef<any>(null);
-  
+
+  useEffect(() => {
+    setUpdatedData({
+      title: data.title,
+      description: data.description,
+      image: data.image
+    })
+  },[updatedData])
+
   const showDeleteTooltip = () => {
     if (deleteTooltipRef.current != null) {
       deleteTooltipRef.current.show();
