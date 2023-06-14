@@ -23,8 +23,8 @@ export default function Data({ data,fetchData }: DataProps) {
     description: data.description,
     image: data.image
   });
-  const deleteTooltipRef = useRef<Tooltip>(null);
-  const updateTooltipRef = useRef<Tooltip>(null);
+  const deleteTooltipRef = useRef<any>(null);
+  const updateTooltipRef = useRef<any>(null);
   
   const showDeleteTooltip = () => {
     if (deleteTooltipRef.current != null) {

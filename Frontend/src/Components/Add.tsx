@@ -1,6 +1,6 @@
 import { FaPlus } from 'react-icons/fa';
 import '../css/Add.css'
-import {useState,useRef} from 'react'
+import React,{useState,useRef} from 'react'
 import { Modal, Button,OverlayTrigger, Tooltip } from 'react-bootstrap';
 import {toast} from 'react-toastify'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,6 +9,7 @@ interface AddProps {
   fetchData : (page: number) => void;
 }
 
+
 export default function Add({fetchData}:AddProps) {
   const [addModalOpen, setAddModalOpen] = useState(false);
   const [addData, setAdddData] = useState({
@@ -16,14 +17,14 @@ export default function Add({fetchData}:AddProps) {
     description: "",
     image: ""
   });
-  const tooltipRef = useRef<Tooltip>(null);
+  const tooltipRef = useRef<any>(null);
 
   const showTooltip = () => {
     if (tooltipRef.current != null) {
-      tooltipRef.current.show();
+      (tooltipRef.current as any).show();
       setTimeout(() => {
         if (tooltipRef.current != null) {
-          tooltipRef.current.hide();
+          (tooltipRef.current as any).hide();
         }
       }, 3000);
     }
@@ -75,7 +76,9 @@ export default function Add({fetchData}:AddProps) {
     <>
      <OverlayTrigger
           placement='top'
-          overlay={<Tooltip ref={tooltipRef}>Add Data</Tooltip>}
+          overlay={<Tooltip ref={tooltipRef}>
+          Add Data
+        </Tooltip>}
           trigger={['hover', 'focus']}
         >
     <div className="add-icon" onClick={handleAdd} onMouseEnter={showTooltip}>
