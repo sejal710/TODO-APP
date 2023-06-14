@@ -6,7 +6,7 @@ import {toast} from 'react-toastify'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 interface AddProps {
-  fetchData : () => void;
+  fetchData : (page: number) => void;
 }
 
 export default function Add({fetchData}:AddProps) {
@@ -61,7 +61,7 @@ export default function Add({fetchData}:AddProps) {
     console.log('Data posted successfully:', data);
     setAddModalOpen(false);
     toast.success("Data Added Successfully")
-    fetchData()
+    fetchData(1)
     }
     catch(e){
       toast.error("Data ws not Added")

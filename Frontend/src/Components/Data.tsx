@@ -12,7 +12,7 @@ export interface DataProps {
     description: string;
     image: string;
   };
-  fetchData: () => void;
+  fetchData: (page: number) => void;
 }
 
 export default function Data({ data,fetchData }: DataProps) {
@@ -68,7 +68,7 @@ export default function Data({ data,fetchData }: DataProps) {
       console.log('Data deleted successfully');
       setDeleteModalOpen(false);
       toast.success("Data Deleted Successfully")
-      fetchData()
+      fetchData(1)
     } catch (e) {
       console.log('Error Message', e);
       toast.error("Data not Deleted Successfully")
@@ -103,7 +103,7 @@ export default function Data({ data,fetchData }: DataProps) {
     toast.success("Data Updated Successfully")
     setUpdateModalOpen(false);
     handleCancelUpdate();
-    fetchData()
+    fetchData(1)
     }
     catch(e){
       console.log("Error Message",e)
