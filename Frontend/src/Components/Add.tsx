@@ -87,7 +87,7 @@ export default function Add({fetchData}:AddProps) {
 </OverlayTrigger>
     <Modal show={addModalOpen} onHide={handleCanceladd}>
         <Modal.Header closeButton>
-          <Modal.Title>Update Data</Modal.Title>
+          <Modal.Title>Add Data</Modal.Title>
         </Modal.Header>
         <Modal.Body>
         <form>
