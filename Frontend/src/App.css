@@ -1,0 +1,53 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.app{
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: url('https://www.betterhealthsolutions.org/wp-content/uploads/2017/12/Depositphotos_134180840_original.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 80px 80px 80px 80px;
+}
+
+.app_data{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: auto;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination_button {
+  display: inline-block;
+  padding: 8px 12px;
+  margin-right: 5px;
+  background-color: #e6e6e6;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination_button:hover {
+  background-color: #ddd;
+}
+
+.pagination_button.active {
+  background-color: #333;
+  color: #fff;
+}

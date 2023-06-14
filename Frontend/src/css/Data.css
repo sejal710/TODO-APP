@@ -1,0 +1,82 @@
+.data{
+    width: 300px;
+    height: 300px;
+    background-color: #F44336;
+    border-radius: 50%;
+    color: #fff;
+    gap:0px
+}
+
+.data_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .data_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .data_img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .data_img:hover::after {
+    opacity: 1;
+  }
+
+  .data_title {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .data_description {
+    font-size: 14px;
+    text-align: center;
+    overflow: auto; 
+    width: 180px;
+    max-height: 50px;
+    margin:  auto auto;
+  }
+
+
+  .data_buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .data_button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .data_button:focus {
+    outline: none;
+  }
+  
+  .data_button svg {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+  }
+  
+  .data_button:hover svg {
+    color: #ffcc00;
+  }
